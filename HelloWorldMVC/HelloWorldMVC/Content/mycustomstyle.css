@@ -1,0 +1,36 @@
+﻿
+
+/*.justin {
+    font-size:20px;
+    font-weight:600;
+    color:orange;
+}
+
+#specific-id {
+    font-size:15px;
+    font-weight:100;
+    color:#ff0000
+}
+
+#another-specific-id {
+    font-size:25px;
+    color:#000
+}
+
+.justin #specific-id i {
+    background-color:#4cff00
+}
+
+.justin.this-is-second {
+    background-color: orange;
+}*/
+
+.row .col-md-4.col-sm-12 {
+    padding:10px 20px
+}
+
+.row .col-md-4.col-sm-12 div {
+    background-color:orange;
+    
+}
+

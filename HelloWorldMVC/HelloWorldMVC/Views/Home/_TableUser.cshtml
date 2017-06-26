@@ -1,0 +1,52 @@
+﻿
+
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Username</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Created On</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in (IEnumerable<User>) ViewBag.ListOfAllUser)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Username</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.EmailAddress</td>
+                <td>@user.CreatedOn</td>
+                <td><a href="#" data-userid="@user.Id" class="edit-link">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    
+
+    $(".edit-link").click(function () {
+        var userId = $(this).attr("data-userId");
+        $.ajax({
+            url: "@Url.Action("EditUser","Home")",
+            type: "POST",            
+        data: { id: userId },
+        success : function(repsonse) {
+            $("#myEditForm").html(repsonse);
+            $("#editUser").modal("show");
+        },
+        error: function() {
+            alert("Error");
+        }
+    });
+    //$("#editUser").modal("show");
+    });
+</script>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca22f0b717f749b8ad16701ecf40f874" Name="Diagram1">
+        <EntityTypeShape EntityType="MytubeModel.Channel" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.Comment" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.Favourite" Width="1.5" PointX="9.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.Role" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.Subscription" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.User" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MytubeModel.Video" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="MytubeModel.FK_Channel_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Subscription_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Video_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Comment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Comment_Video" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Favourite_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Favourite_Video" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MytubeModel.FK_Subscription_Subscription" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

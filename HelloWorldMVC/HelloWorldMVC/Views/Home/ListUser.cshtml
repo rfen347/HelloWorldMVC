@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "ListUser";
+}
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.common-material.min.css" />
+<link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.material.min.css" />
+<script src="//kendo.cdn.telerik.com/2015.3.930/js/jquery.min.js"></script>
+<script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
+<link href="~/Content/mycustomstyle.css" rel="stylesheet" />
+<h2>List User</h2>
+@*<a href="@Url.Action("AddNewUser", "Home")"> Add new user </a>*@
+<a href="#" id="add-new-user-link"> Add new user </a>
+<div id="table-user-display-here">
+    @Html.Action("TableUser", "Home")
+    <!-- this is where HTML appended when ajax called is success-->
+</div>
+
+<div id="grid"></div>
+
+<div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div id="myEditForm">
+                    <!-- this is where HTML appended when ajax called is success-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div id="addNewUserForm">
+                    <!-- this is where HTML appended when ajax called is success-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    @*$("#table-user-display-here").load("@Url.Action("TableUser","Home")");*@
+    $("#add-new-user-link").click(function () {
+        //TODO this is what we call server
+        $("#addNewUserForm").load("@Url.Action("AddNewUser","Home")");
+        $("#addUser").modal("show");
+    });
+</script>
+
+
+
+
